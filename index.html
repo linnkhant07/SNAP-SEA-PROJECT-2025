@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linn's Time Capsule</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="scripts/scripts.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <h1>🕰️ Linn's Time Capsule (2004–2025)</h1>
+    <p>My personal catalog of memorable events, inventions, and moments throughout the years</p>
+  </header>
 
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
+  <main>
+
+    <div class="sort-controls">
+      <label for="sort-select">Sort By Year:</label>
+      <select id="sort-select">
+        <option value="asc">Oldest → Newest</option>
+        <option value="desc">Newest → Oldest</option>
+      </select>
+    </div>
+    
     <div id="card-container"></div>
+
     <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>Year — Title</h2>
+          <img src="" alt="Event image" />
+        </div>
+        <div class="card-back">
+          <ul>
+            <li class="desc">Description</li>
+            <li class="personal">Personal Connection</li>
+          </ul>
+          <div class="card-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
-    </div>
-  </body>
+  </main>
+
+  <footer class="footer">
+    <button id="add-btn"> Add New Year</button>
+  </footer>
+  
+</body>
 </html>
